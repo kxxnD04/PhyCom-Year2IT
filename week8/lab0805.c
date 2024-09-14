@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <math.h>
+# define PI           3.14159265358979323846
 void merge_sort(double arr[], int l, int r);
-void merge(double arr[], int l, int m, int r);
+void merge(double arr[], int l, int m, int r); // for recursive function to merge the array
 int main() {
     int n, i, state = 0;
     double num, total = 0, sd_ = 0, med = 0;
-
+    double n = sin(90 * (PI/180));
     scanf("%d", &n);
     double arr[n];
 
@@ -89,11 +90,3 @@ void merge(double arr[], int l, int m, int r) {
     }
 }
 
-void merge_sort(double arr[], int l, int r) {
-    if (l < r) {
-        int m = l + (r - l) / 2;
-        merge_sort(arr, l, m);//ซ้าย
-        merge_sort(arr, m + 1, r);// ขวา
-        merge(arr, l, m, r); // รวม
-    }
-}
