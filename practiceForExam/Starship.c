@@ -26,5 +26,4 @@ int main(){
             printf("Exploration-class starship");
         }else{printf("General-class starship");}
     }
-
 }
